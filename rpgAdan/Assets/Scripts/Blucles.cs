@@ -12,6 +12,9 @@ public class Blucles : MonoBehaviour
     public TextMeshProUGUI[] textActorButtons;
     public TextMeshProUGUI[] textEnemyButtons;
 
+    int selectedActor;
+    int selectedEnemy;
+
     string[] actorNames = { "Cloud", "Nines", "Sunny", "Morgana" };
     int[] actorHealth = { 15, 15, 10, 20 };
     int[] actorDamage = { 5, 5, 10, 4  };
@@ -50,6 +53,12 @@ public class Blucles : MonoBehaviour
         }
 
 
+    }
+
+    public void SelectActor(int number)
+    {
+        selectedActor = number;
+        print(selectedActor);
     }
     public void Jugar()
     {
