@@ -624,6 +624,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Blucles
   initialScreen: {fileID: 813228579}
   gameScreen: {fileID: 381498843}
+  textActorButtons:
+  - {fileID: 1829903526}
+  - {fileID: 207611273}
+  - {fileID: 1181453984}
+  - {fileID: 2031094562}
+  textEnemyButtons:
+  - {fileID: 492029345}
+  - {fileID: 778689923}
+  - {fileID: 1385872731}
+  - {fileID: 1643991931}
 --- !u!1 &381498843
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &381498844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2037,6 +2047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Blucles
   initialScreen: {fileID: 0}
   gameScreen: {fileID: 0}
+  textActorButtons: []
+  textEnemyButtons: []
 --- !u!4 &1359641526
 Transform:
   m_ObjectHideFlags: 0

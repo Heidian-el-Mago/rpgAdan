@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.AppUI.UI;
 using Unity.Collections;
 using UnityEngine;
@@ -6,6 +7,11 @@ using static UnityEditor.PlayerSettings;
 
 public class Blucles : MonoBehaviour
 {
+    public GameObject initialScreen;
+    public GameObject gameScreen;
+    public TextMeshProUGUI[] textActorButtons;
+    public TextMeshProUGUI[] textEnemyButtons;
+
     string[] actorNames = { "Cloud", "Nines", "Sunny", "Morgana" };
     int[] actorHealth = { 15, 15, 10, 20 };
     int[] actorDamage = { 5, 5, 10, 4  };
@@ -14,8 +20,6 @@ public class Blucles : MonoBehaviour
     int[] enemyHealth = new int[4];
     int[] enemyDamage = { 3, 3, 3, 3 };
 
-    public GameObject initialScreen;
-    public GameObject gameScreen;
 
     void Start()
     {
@@ -35,6 +39,16 @@ public class Blucles : MonoBehaviour
             }
                 print(enemyNames[i] + " tiene " + enemyHealth[i] + " HP y " + enemyDamage[i] + " DMG");
         }
+
+        for (int i = 0; i < actorNames.Length; i++)
+        {
+            textActorButtons[i].text = $"{actorNames[i]} {actorHealth[i]}";
+        }
+        for (int i = 0; i < enemyNames.Length; i++)
+        {
+            textEnemyButtons[i].text = $"{enemyNames[i]} {enemyHealth[i]}";
+        }
+
 
     }
     public void Jugar()
